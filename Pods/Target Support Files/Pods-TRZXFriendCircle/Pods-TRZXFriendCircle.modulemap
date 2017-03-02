@@ -1,0 +1,6 @@
+framework module Pods_TRZXFriendCircle {
+  umbrella header "Pods-TRZXFriendCircle-umbrella.h"
+
+  export *
+  module * { export * }
+}
