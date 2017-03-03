@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
     s.resources    = 'TRZXFriendCircle/TRZXFriendCircle/**/*.{xib,png}'
 
     s.dependency "TRZXNetwork"
-    s.dependency "ReactiveCocoa"
     s.dependency "MJExtension"
     s.dependency "IQKeyboardManager"
     s.dependency "TRZXKit"

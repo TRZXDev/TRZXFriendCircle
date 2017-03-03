@@ -14,7 +14,6 @@
 		B7329E0F1E681C75005D1D65 /* TRZXFriendCircleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329E0E1E681C75005D1D65 /* TRZXFriendCircleTests.m */; };
 		B7329E1A1E681C75005D1D65 /* TRZXFriendCircleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329E191E681C75005D1D65 /* TRZXFriendCircleUITests.m */; };
 		B7329E291E681CF0005D1D65 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329E281E681CF0005D1D65 /* FirstViewController.m */; };
-		B7329E2C1E681CFE005D1D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7329E2B1E681CFE005D1D65 /* Main.storyboard */; };
 		B7329ED81E681D30005D1D65 /* album_add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7329E2F1E681D30005D1D65 /* album_add_photo@2x.png */; };
 		B7329ED91E681D30005D1D65 /* album_timeLine.png in Resources */ = {isa = PBXBuildFile; fileRef = B7329E301E681D30005D1D65 /* album_timeLine.png */; };
 		B7329EDA1E681D30005D1D65 /* AlbumAddBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7329E311E681D30005D1D65 /* AlbumAddBtn@2x.png */; };
@@ -108,6 +107,7 @@
 		B7329F321E681D30005D1D65 /* TRZXSDBaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329ED41E681D30005D1D65 /* TRZXSDBaseRefreshView.m */; };
 		B7329F331E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329ED61E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m */; };
 		B7329F341E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7329ED71E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib */; };
+		B7329F361E682311005D1D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7329F351E682311005D1D65 /* Main.storyboard */; };
 		D70DEDFC20002E9E826539F1 /* Pods_TRZXFriendCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9215CB2C1363CBCB7016DDFF /* Pods_TRZXFriendCircle.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,7 +147,6 @@
 		B7329E1B1E681C75005D1D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7329E271E681CF0005D1D65 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		B7329E281E681CF0005D1D65 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B7329E2A1E681CFE005D1D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7329E2F1E681D30005D1D65 /* album_add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_add_photo@2x.png"; sourceTree = "<group>"; };
 		B7329E301E681D30005D1D65 /* album_timeLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = album_timeLine.png; sourceTree = "<group>"; };
 		B7329E311E681D30005D1D65 /* AlbumAddBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumAddBtn@2x.png"; sourceTree = "<group>"; };
@@ -292,6 +291,7 @@
 		B7329ED51E681D30005D1D65 /* TRZXSendTimeLineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZXSendTimeLineHeaderView.h; sourceTree = "<group>"; };
 		B7329ED61E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZXSendTimeLineHeaderView.m; sourceTree = "<group>"; };
 		B7329ED71E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRZXSendTimeLineHeaderView.xib; sourceTree = "<group>"; };
+		B7329F351E682311005D1D65 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,7 +358,7 @@
 				B7329DF81E681C75005D1D65 /* AppDelegate.m */,
 				B7329E271E681CF0005D1D65 /* FirstViewController.h */,
 				B7329E281E681CF0005D1D65 /* FirstViewController.m */,
-				B7329E2B1E681CFE005D1D65 /* Main.storyboard */,
+				B7329F351E682311005D1D65 /* Main.storyboard */,
 				B7329E001E681C75005D1D65 /* Assets.xcassets */,
 				B7329E021E681C75005D1D65 /* LaunchScreen.storyboard */,
 				B7329E051E681C75005D1D65 /* Info.plist */,
@@ -902,10 +902,10 @@
 				B7329EEF1E681D30005D1D65 /* TRZXComment.png in Resources */,
 				B7329EDC1E681D30005D1D65 /* AlbumComment@3x.png in Resources */,
 				B7329EDD1E681D30005D1D65 /* AlbumLike@2x.png in Resources */,
-				B7329E2C1E681CFE005D1D65 /* Main.storyboard in Resources */,
 				B7329EF01E681D30005D1D65 /* TRZXComment1.png in Resources */,
 				B7329F101E681D30005D1D65 /* SendTimeLineHeaderView.xib in Resources */,
 				B7329EF71E681D30005D1D65 /* 展位图.png in Resources */,
+				B7329F361E682311005D1D65 /* Main.storyboard in Resources */,
 				B7329EE01E681D30005D1D65 /* AlbumOperateMore@3x.png in Resources */,
 				B7329EEB1E681D30005D1D65 /* photo_delete@2x.png in Resources */,
 				B7329F231E681D30005D1D65 /* MHSheetFoot.xib in Resources */,
@@ -1082,15 +1082,6 @@
 				B7329E031E681C75005D1D65 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		B7329E2B1E681CFE005D1D65 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7329E2A1E681CFE005D1D65 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ../../../TRZXFriendCircle/TRZXFriendCircle;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

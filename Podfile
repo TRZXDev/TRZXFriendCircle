@@ -8,7 +8,7 @@ use_frameworks!
 def pods
 
     pod 'TRZXNetwork'
-    pod 'ReactiveCocoa', '~> 2.5’
+ #   pod 'ReactiveCocoa', '~> 2.5’
     pod 'MJExtension'
     pod 'IQKeyboardManager'
     pod 'TRZXKit'
