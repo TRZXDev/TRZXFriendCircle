@@ -104,7 +104,6 @@
 		B7329F2F1E681D30005D1D65 /* TRZXFriendDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329ECD1E681D30005D1D65 /* TRZXFriendDetailsViewController.m */; };
 		B7329F301E681D30005D1D65 /* TRZXFriendDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329ED01E681D30005D1D65 /* TRZXFriendDetailsCell.m */; };
 		B7329F311E681D30005D1D65 /* TRZXNewCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329ED21E681D30005D1D65 /* TRZXNewCommentsView.m */; };
-		B7329F321E681D30005D1D65 /* TRZXSDBaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329ED41E681D30005D1D65 /* TRZXSDBaseRefreshView.m */; };
 		B7329F331E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329ED61E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m */; };
 		B7329F341E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7329ED71E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib */; };
 		B7329F361E682311005D1D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7329F351E682311005D1D65 /* Main.storyboard */; };
@@ -288,8 +287,6 @@
 		B7329ED01E681D30005D1D65 /* TRZXFriendDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZXFriendDetailsCell.m; sourceTree = "<group>"; };
 		B7329ED11E681D30005D1D65 /* TRZXNewCommentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZXNewCommentsView.h; sourceTree = "<group>"; };
 		B7329ED21E681D30005D1D65 /* TRZXNewCommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZXNewCommentsView.m; sourceTree = "<group>"; };
-		B7329ED31E681D30005D1D65 /* TRZXSDBaseRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZXSDBaseRefreshView.h; sourceTree = "<group>"; };
-		B7329ED41E681D30005D1D65 /* TRZXSDBaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZXSDBaseRefreshView.m; sourceTree = "<group>"; };
 		B7329ED51E681D30005D1D65 /* TRZXSendTimeLineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZXSendTimeLineHeaderView.h; sourceTree = "<group>"; };
 		B7329ED61E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZXSendTimeLineHeaderView.m; sourceTree = "<group>"; };
 		B7329ED71E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRZXSendTimeLineHeaderView.xib; sourceTree = "<group>"; };
@@ -753,8 +750,6 @@
 				B7329ED01E681D30005D1D65 /* TRZXFriendDetailsCell.m */,
 				B7329ED11E681D30005D1D65 /* TRZXNewCommentsView.h */,
 				B7329ED21E681D30005D1D65 /* TRZXNewCommentsView.m */,
-				B7329ED31E681D30005D1D65 /* TRZXSDBaseRefreshView.h */,
-				B7329ED41E681D30005D1D65 /* TRZXSDBaseRefreshView.m */,
 				B7329ED51E681D30005D1D65 /* TRZXSendTimeLineHeaderView.h */,
 				B7329ED61E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m */,
 				B7329ED71E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib */,
@@ -1004,7 +999,6 @@
 				B7329F111E681D30005D1D65 /* SDBrowserImageView.m in Sources */,
 				B7329F261E681D30005D1D65 /* MHSheetView.m in Sources */,
 				B7329F2B1E681D30005D1D65 /* TRZXFriendLineRefreshHeader.m in Sources */,
-				B7329F321E681D30005D1D65 /* TRZXSDBaseRefreshView.m in Sources */,
 				B7329F2F1E681D30005D1D65 /* TRZXFriendDetailsViewController.m in Sources */,
 				B7329EFE1E681D30005D1D65 /* SharePhotoTimeLineCell.m in Sources */,
 				B7329F2A1E681D30005D1D65 /* TRZXFriendLineRefreshFooter.m in Sources */,
