@@ -425,7 +425,7 @@ static CGFloat textFieldH = 40;
 
     TRZXFriendLineCell *cell = [tableView dequeueReusableCellWithIdentifier:kTimeLineTableViewCellId];
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:kTimeLineTableViewCellId owner:self options:nil] lastObject];
+        cell = [[[NSBundle bundleForClass:[self class]]loadNibNamed:kTimeLineTableViewCellId owner:self options:nil] lastObject];
     }
 
     cell.indexPath = indexPath;

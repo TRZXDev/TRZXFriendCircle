@@ -91,7 +91,7 @@ static NSInteger photoMaxCount = 9;
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     
-    self.sendTimeLineHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"TRZXSendTimeLineHeaderView" owner:self options:nil] lastObject];
+    self.sendTimeLineHeaderView = [[[NSBundle bundleForClass:[self class]]loadNibNamed:@"TRZXSendTimeLineHeaderView" owner:self options:nil] lastObject];
     self.sendTimeLineHeaderView.frame = CGRectMake(0, 64, SCREEN_WIDTH,100 );
     
     self.sendTimeLineHeaderView.photoTextView.delegate = self;

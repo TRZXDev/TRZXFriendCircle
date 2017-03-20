@@ -317,7 +317,7 @@
 
         PhotoTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoTimeLineCell"];
         if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"PhotoTimeLineCell" owner:self options:nil] lastObject];
+            cell = [[[NSBundle bundleForClass:[self class]]loadNibNamed:@"PhotoTimeLineCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.dayLabel.hidden = NO;
@@ -341,7 +341,7 @@
 
         SharePhotoTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SharePhotoTimeLineCell"];
         if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"SharePhotoTimeLineCell" owner:self options:nil] lastObject];
+            cell = [[[NSBundle bundleForClass:[self class]]loadNibNamed:@"SharePhotoTimeLineCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = model;
@@ -352,7 +352,7 @@
 
         TextTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextTimeLineCell"];
         if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"TextTimeLineCell" owner:self options:nil] lastObject];
+            cell = [[[NSBundle bundleForClass:[self class]]loadNibNamed:@"TextTimeLineCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = model;
@@ -364,7 +364,7 @@
 
         PhotoTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoTimeLineCell"];
         if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"PhotoTimeLineCell" owner:self options:nil] lastObject];
+            cell = [[[NSBundle bundleForClass:[self class]]loadNibNamed:@"PhotoTimeLineCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.photoImageView = [self createImageViewWithCanvasView:cell.photoImageView pics:model.pics];

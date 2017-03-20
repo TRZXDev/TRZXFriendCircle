@@ -309,7 +309,7 @@
 - (NSURL *)photoBrowser:(TRZXFriendPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
 {
     NSString *imageName = self.picPathStringsArray[index];
-    NSURL *url = [[NSBundle mainBundle] URLForResource:imageName withExtension:nil];
+    NSURL *url = [[NSBundle bundleForClass:[self class]]URLForResource:imageName withExtension:nil];
     return url;
 }
 

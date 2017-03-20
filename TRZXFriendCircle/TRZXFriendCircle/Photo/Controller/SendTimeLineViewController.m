@@ -95,7 +95,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [self setRightBarItemWithString:@"发送"];
 
 
-    self.sendTimeLineHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"SendTimeLineHeaderView" owner:self options:nil] lastObject];
+    self.sendTimeLineHeaderView = [[[NSBundle bundleForClass:[self class]]loadNibNamed:@"SendTimeLineHeaderView" owner:self options:nil] lastObject];
     self.sendTimeLineHeaderView.frame = CGRectMake(0, 64, SCREEN_WIDTH,100 );
     self.sendTimeLineHeaderView.photoTextView.delegate = self;
     self.sendTimeLineHeaderView.photoTextView.delegate = self;

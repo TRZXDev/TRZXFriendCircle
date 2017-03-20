@@ -43,7 +43,7 @@
 {
     MHSheetCell *cell= [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MHSheetCell class])];
     if (cell == nil) {
-        cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MHSheetCell class]) owner:self options:nil].lastObject;
+        cell = [[NSBundle bundleForClass:[self class]]loadNibNamed:NSStringFromClass([MHSheetCell class]) owner:self options:nil].lastObject;
         if (_cellTextColor) {
             cell.myLabel.textColor = _cellTextColor;
         }

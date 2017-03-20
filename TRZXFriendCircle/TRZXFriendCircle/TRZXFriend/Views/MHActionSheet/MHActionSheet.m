@@ -57,10 +57,10 @@
         self.contentView = [[UIView alloc] init];
         [self addSubview:self.contentView];
         //取消按钮View
-        self.footView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MHSheetFoot class]) owner:self options:nil].lastObject;
+        self.footView = [[NSBundle bundleForClass:[self class]]loadNibNamed:NSStringFromClass([MHSheetFoot class]) owner:self options:nil].lastObject;
         [self addSubview:self.footView];
         //选择TableView
-        self.sheetView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MHSheetView class]) owner:self options:nil].lastObject;
+        self.sheetView = [[NSBundle bundleForClass:[self class]]loadNibNamed:NSStringFromClass([MHSheetView class]) owner:self options:nil].lastObject;
         self.sheetView.cellHeight = kCellH;
         self.sheetView.delegate = self;
         self.sheetView.dataSource = self.dataSource;
@@ -92,7 +92,7 @@
     //标题
     BOOL isTitle = NO;
     if (title.length > 0) {
-        selfView.titleView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MHSheetHead class]) owner:selfView options:nil].lastObject;
+        selfView.titleView = [[NSBundle bundleForClass:[self class]]loadNibNamed:NSStringFromClass([MHSheetHead class]) owner:selfView options:nil].lastObject;
         selfView.titleView.headLabel.text = title;
         isTitle = YES;
         [selfView.contentView addSubview:selfView.titleView];
@@ -153,7 +153,7 @@
     //标题
     BOOL isTitle = NO;
     if (title.length > 0) {
-        selfView.titleView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MHSheetHead class]) owner:selfView options:nil].lastObject;
+        selfView.titleView = [[NSBundle bundleForClass:[self class]]loadNibNamed:NSStringFromClass([MHSheetHead class]) owner:selfView options:nil].lastObject;
         selfView.titleView.headLabel.text = title;
         isTitle = YES;
         [selfView.contentView addSubview:selfView.titleView];
@@ -203,7 +203,7 @@
     //标题
     BOOL isTitle = NO;
     if (title.length > 0) {
-        selfView.titleView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MHSheetHead class]) owner:selfView options:nil].lastObject;
+        selfView.titleView = [[NSBundle bundleForClass:[self class]]loadNibNamed:NSStringFromClass([MHSheetHead class]) owner:selfView options:nil].lastObject;
         selfView.titleView.headLabel.text = title;
         selfView.titleView.headLabel.textAlignment = NSTextAlignmentLeft;
         isTitle = YES;
