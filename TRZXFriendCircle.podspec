@@ -15,15 +15,18 @@ Pod::Spec.new do |s|
     s.dependency "IQKeyboardManager"
     s.dependency "TRZXKit"
     s.dependency "MJRefresh"
+
     s.dependency "SDWebImage"
     s.dependency "Masonry"
     s.dependency "SDAutoLayout"
     s.dependency "TZImagePickerController"
     s.dependency "TRZXZJWPhotoPicker"
+
     s.dependency "TRZXKit"
     s.dependency "TRZXMSSBrowse"
     s.dependency "MLLabel"
     s.dependency "TRZXDIYRefresh"
+    s.dependency "CTMediator"
 
     s.requires_arc = true
 end

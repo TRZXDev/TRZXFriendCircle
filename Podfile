@@ -13,11 +13,13 @@ def pods
     pod 'IQKeyboardManager'
     pod 'TRZXKit'
     pod 'MJRefresh'
+
     pod 'SDWebImage'
     pod 'Masonry'
     pod 'SDAutoLayout'
     pod 'TZImagePickerController'
     pod 'TRZXZJWPhotoPicker'
+
     pod 'TRZXKit'
     pod 'TRZXMSSBrowse'
     pod 'MLLabel'
