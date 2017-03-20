@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "TRZXFriendCircle"
-    s.version      = "0.0.2"
+    s.version      = "0.0.3"
     s.ios.deployment_target = '8.0'
     s.summary      = "TRZXFriendCircle"
     s.homepage     = "https://github.com/TRZXDev/TRZXFriendCircle"
