@@ -22,7 +22,7 @@ def pods
     pod 'TRZXMSSBrowse'
     pod 'MLLabel'
     pod 'TRZXDIYRefresh'
-
+    pod 'CTMediator'
 
 
 

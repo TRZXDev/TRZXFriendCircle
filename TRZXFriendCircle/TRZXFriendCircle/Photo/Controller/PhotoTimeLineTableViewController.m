@@ -90,26 +90,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    self.mainTitle.textColor = [UIColor whiteColor];
-//    [self.backBtn setTitleColor:[UIColor whiteColor]  forState:UIControlStateNormal];
-//    [self.backBtn setImage:[UIImage imageNamed:@"返回白"] forState:UIControlStateNormal];
-//    self.lab.hidden = YES;
-//    self.navigationView.backgroundColor = [UIColor colorWithRed:55/255.0 green:54/255.0 blue:59/255.0 alpha:0.85];
-//    self.navigationController.delegate = self;
-//
-//    if ([_otherIdStr isEqualToString:[KPOUserDefaults userId]]) {
-//        self.saveBtn.hidden = NO;
-//        self.mainTitle.text = @"相册";
-//    }else{
-//        self.mainTitle.text = _nameStr;
-//        self.saveBtn.hidden = YES;
-//    }
-//    [self.saveBtn setTitle:@"..." forState:UIControlStateNormal];
-//    self.saveBtn.titleLabel.font = [UIFont systemFontOfSize:40];
-//    self.saveBtn.titleEdgeInsets = UIEdgeInsetsMake(-5,0,11,15);
-//    [self.saveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
     self.title = @"相册";
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];

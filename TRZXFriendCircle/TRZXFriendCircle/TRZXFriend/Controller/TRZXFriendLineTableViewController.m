@@ -115,26 +115,22 @@ static CGFloat textFieldH = 40;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [IQKeyboardManager sharedManager].enable = NO;
     
-    self.navigationController.navigationBarHidden = NO;
-    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-    self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:heizideColor}];
+//    self.navigationController.navigationBarHidden = NO;
+//    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+//    self.navigationController.navigationBar.translucent = NO;
+//    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
+//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:heizideColor}];
     _textField.hidden = NO;
     //通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refersh) name:@"NewDynamicNotification" object:nil];
 }
 -(void)viewWillDisappear:(BOOL)animated{
 
-//    [[SDWebImageManager sharedManager] cancelAll];
-//    [[SDImageCache sharedImageCache] clearDisk];
-
-
     [IQKeyboardManager sharedManager].enable = YES;
 
-    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-    self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.navigationBar.tintColor = nil;
+//    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+//    self.navigationController.navigationBar.translucent = YES;
+//    self.navigationController.navigationBar.tintColor = nil;
     [_textField resignFirstResponder];
     _textField.hidden = YES;
     [_refreshHeader removeFromSuperview];
@@ -158,7 +154,7 @@ static CGFloat textFieldH = 40;
     
     _selfIconStr = @"首页头像";
     _selfNameStr = @"张江威";
-    _selfIDStr = @"ed48b2ecda7f485e9c3353ecfb53f3f5";
+    _selfIDStr = @"d6709590d4154b8a945415cf91757c8f";
     
 //    [self setRightBarItemWithString:@"发送"];
     

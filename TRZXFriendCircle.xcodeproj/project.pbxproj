@@ -108,6 +108,8 @@
 		B7329F331E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7329ED61E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m */; };
 		B7329F341E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7329ED71E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib */; };
 		B7329F361E682311005D1D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7329F351E682311005D1D65 /* Main.storyboard */; };
+		B7F2749E1E7F7DCC00D33A96 /* CTMediator+TRZXFriendCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F2749D1E7F7DCC00D33A96 /* CTMediator+TRZXFriendCircle.m */; };
+		B7F274A11E7F7E1000D33A96 /* Target_TRZXFriendCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F274A01E7F7E1000D33A96 /* Target_TRZXFriendCircle.m */; };
 		D70DEDFC20002E9E826539F1 /* Pods_TRZXFriendCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9215CB2C1363CBCB7016DDFF /* Pods_TRZXFriendCircle.framework */; };
 /* End PBXBuildFile section */
 
@@ -292,6 +294,10 @@
 		B7329ED61E681D30005D1D65 /* TRZXSendTimeLineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZXSendTimeLineHeaderView.m; sourceTree = "<group>"; };
 		B7329ED71E681D30005D1D65 /* TRZXSendTimeLineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRZXSendTimeLineHeaderView.xib; sourceTree = "<group>"; };
 		B7329F351E682311005D1D65 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B7F2749C1E7F7DCC00D33A96 /* CTMediator+TRZXFriendCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTMediator+TRZXFriendCircle.h"; sourceTree = "<group>"; };
+		B7F2749D1E7F7DCC00D33A96 /* CTMediator+TRZXFriendCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+TRZXFriendCircle.m"; sourceTree = "<group>"; };
+		B7F2749F1E7F7E1000D33A96 /* Target_TRZXFriendCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_TRZXFriendCircle.h; sourceTree = "<group>"; };
+		B7F274A01E7F7E1000D33A96 /* Target_TRZXFriendCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_TRZXFriendCircle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +408,10 @@
 				B7329E8C1E681D30005D1D65 /* TRZXFriend */,
 				B7329EC01E681D30005D1D65 /* 新消息 */,
 				B7329ECA1E681D30005D1D65 /* 详情 */,
+				B7F2749C1E7F7DCC00D33A96 /* CTMediator+TRZXFriendCircle.h */,
+				B7F2749D1E7F7DCC00D33A96 /* CTMediator+TRZXFriendCircle.m */,
+				B7F2749F1E7F7E1000D33A96 /* Target_TRZXFriendCircle.h */,
+				B7F274A01E7F7E1000D33A96 /* Target_TRZXFriendCircle.m */,
 			);
 			path = TRZXFriendCircle;
 			sourceTree = "<group>";
@@ -998,6 +1008,7 @@
 				B7329F2F1E681D30005D1D65 /* TRZXFriendDetailsViewController.m in Sources */,
 				B7329EFE1E681D30005D1D65 /* SharePhotoTimeLineCell.m in Sources */,
 				B7329F2A1E681D30005D1D65 /* TRZXFriendLineRefreshFooter.m in Sources */,
+				B7F274A11E7F7E1000D33A96 /* Target_TRZXFriendCircle.m in Sources */,
 				B7329F1F1E681D30005D1D65 /* MHActionSheet.m in Sources */,
 				B7329F061E681D30005D1D65 /* PhotoTimeModel.m in Sources */,
 				B7329F1E1E681D30005D1D65 /* TRZXFriendMessageView.m in Sources */,
@@ -1021,6 +1032,7 @@
 				B7329F161E681D30005D1D65 /* ShareDeleViewController.m in Sources */,
 				B7329F181E681D30005D1D65 /* TRZXFriendLineTableViewController.m in Sources */,
 				B7329F291E681D30005D1D65 /* TRZXFriendPhotoContainerView.m in Sources */,
+				B7F2749E1E7F7DCC00D33A96 /* CTMediator+TRZXFriendCircle.m in Sources */,
 				B7329EFA1E681D30005D1D65 /* LxGridViewFlowLayout.m in Sources */,
 				B7329DF91E681C75005D1D65 /* AppDelegate.m in Sources */,
 				B7329F0B1E681D30005D1D65 /* SDTimeLineCellCommentView.m in Sources */,

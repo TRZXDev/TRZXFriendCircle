@@ -9,6 +9,8 @@
 #import "FirstViewController.h"
 #import "TRZXFriendLineTableViewController.h"
 #import "PhotoTimeLineTableViewController.h"
+#import "CTMediator+TRZXFriendCircle.h"
+#import <CTMediator/CTMediator.h>
 
 @interface FirstViewController ()
 
@@ -37,17 +39,12 @@
 }
 -(void)btnClick:(UIButton *)sender{
     if (sender.tag == 1) {
-        TRZXFriendLineTableViewController *friendViewController = [[TRZXFriendLineTableViewController alloc] init];
-        friendViewController.selfIconStr = @"首页头像";
-        friendViewController.selfNameStr = @"张江威";
-        friendViewController.selfIDStr = @"ed48b2ecda7f485e9c3353ecfb53f3f5";
-        [self.navigationController pushViewController:friendViewController animated:true];
+        UIViewController *vc = [[CTMediator sharedInstance]FriendCircle_TRZXFriendLineTableViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+        
     }else{
-        PhotoTimeLineTableViewController *friendViewController = [[PhotoTimeLineTableViewController alloc] init];
-//        friendViewController.selfIconStr = @"首页头像";
-//        friendViewController.selfNameStr = @"张江威";
-        friendViewController.otherIdStr = @"ed48b2ecda7f485e9c3353ecfb53f3f5";
-        [self.navigationController pushViewController:friendViewController animated:true];
+        UIViewController *vc = [[CTMediator sharedInstance]FriendCircle_PhotoTimeLineTableViewController];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
 }

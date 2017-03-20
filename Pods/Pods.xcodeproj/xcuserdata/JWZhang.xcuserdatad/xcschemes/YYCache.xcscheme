@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '131BBCEBDB28B0B752FC3BA6785A77EF'
+               BlueprintIdentifier = 'DA2F7E722442D62937E6D4497A21FAB2'
                BlueprintName = 'YYCache'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'YYCache.framework'>
