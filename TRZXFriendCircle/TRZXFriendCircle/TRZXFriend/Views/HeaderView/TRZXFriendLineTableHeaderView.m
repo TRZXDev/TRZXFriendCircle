@@ -8,6 +8,8 @@
 
 #import "UIImageView+WebCache.h"
 
+#import <TRZXLogin/Login.h>
+
 @implementation TRZXFriendLineTableHeaderView
 
 
@@ -35,7 +37,7 @@
     [self addSubview:_iconView];
     
     _nameLabel = [UILabel new];
-    _nameLabel.text = @"";//默认自己的ID
+    _nameLabel.text = [Login curLoginUser].name;//姓名//默认自己的
     _nameLabel.textColor = [UIColor whiteColor];
     _nameLabel.textAlignment = NSTextAlignmentRight;
     _nameLabel.font = [UIFont boldSystemFontOfSize:17];
@@ -62,7 +64,7 @@
 - (void)setModel:(TRZXFriendLineCellModel *)model{
     _model = model;
 //    [_iconView setImage:[UIImage imageWithData:[NSData dataWithContentsOfFile:UserInfoImagePath]]];
-    _iconView.image = [UIImage imageNamed:@""];//默认的头像id
+    _iconView.image = [UIImage imageNamed:[Login curLoginUser].name];//默认的头像
      [_backgroundImageView sd_setImageWithURL:[NSURL URLWithString:model.coverImage] placeholderImage:[UIImage imageNamed:@"TRZXBG"]];
         _nameLabel.tag = 1000;
 }

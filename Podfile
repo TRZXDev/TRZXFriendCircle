@@ -25,7 +25,7 @@ def pods
     pod 'MLLabel'
     pod 'TRZXDIYRefresh'
     pod 'CTMediator'
-
+    pod 'TRZXLogin'
 
 
 end

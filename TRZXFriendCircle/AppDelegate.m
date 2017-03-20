@@ -19,10 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSMutableDictionary *headers = [[NSMutableDictionary alloc]init];
-    [headers setValue:@"b8a649b1cef6ccfcce0b53b82380d49d" forKey:@"token"];
-    [headers setValue:@"d6709590d4154b8a945415cf91757c8f" forKey:@"userId"];
+    [headers setValue:@"7cd9624f25cd2a1c8a36d28a8e930418" forKey:@"token"];
+    [headers setValue:@"9cbde6d2b93a4c21ad20219af1b0f33b" forKey:@"userId"];
     [headers setValue:@"iOS" forKey:@"equipment"];
-    
     
     [TRZXNetwork configWithBaseURL:@"http://test.mmwipo.com:8088/"];
     [TRZXNetwork configWithNewBaseURL:@"http://test.mmwipo.com:8088/"];

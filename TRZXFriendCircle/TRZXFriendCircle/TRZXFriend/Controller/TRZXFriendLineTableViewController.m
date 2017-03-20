@@ -28,10 +28,16 @@
 #import "SDImageCache.h"
 #import "SDWebImageCompat.h"
 #import "UIImageView+WebCache.h"
+#import "Login.h"
+
 
 #define zideColor [UIColor colorWithRed:179.0/255.0 green:179.0/255.0 blue:179.0/255.0 alpha:1]
 #define heizideColor [UIColor colorWithRed:90.0/255.0 green:90.0/255.0 blue:90.0/255.0 alpha:1]
 #define kTimeLineTableViewCellId @"TRZXFriendLineCell"
+
+#define HEIGTH(view) view.frame.size.height
+#define WIDTH(view) view.frame.size.width
+#define backColor [UIColor colorWithRed:240.0/255.0 green:239.0/255.0 blue:244.0/255.0 alpha:1]
 
 static CGFloat textFieldH = 40;
 
@@ -45,7 +51,7 @@ static CGFloat textFieldH = 40;
 @property (nonatomic, copy) NSString * commentIdStr;//删除评论的ID
 @property (nonatomic, copy) NSString * hfcommentStr;//回复评论的
 @property (nonatomic, copy) NSString * commentStr;//评论的内容
-
+@property (strong, nonatomic) UILabel *noLabelView;
 @property (nonatomic, copy) NSString * coverStr;//封面图
 @property (nonatomic, copy) NSString * headStr;//头像
 @property (nonatomic, copy) NSString * nameStr;//名字
@@ -112,7 +118,7 @@ static CGFloat textFieldH = 40;
     
 //    self.navigationController.navigationBarHidden = NO;
 //    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-//    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.translucent = NO;
 //    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
 //    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:heizideColor}];
     _textField.hidden = NO;
@@ -123,8 +129,8 @@ static CGFloat textFieldH = 40;
 
     [IQKeyboardManager sharedManager].enable = YES;
 
-//    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-//    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationController.navigationBar.translucent = YES;
 //    self.navigationController.navigationBar.tintColor = nil;
     [_textField resignFirstResponder];
     _textField.hidden = YES;
@@ -137,11 +143,20 @@ static CGFloat textFieldH = 40;
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
-
-//    self.tableView.delegate = self;
-//    self.tableView.dataSource = self;
-//    self.tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-//    [self.view addSubview:self.tableView];
+    self.tableView.separatorStyle = NO;
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.edgesForExtendedLayout = UIRectEdgeTop;
+    
+//    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH(self.view), HEIGTH(self.view))];
+//    _tableView.delegate = self;
+//    _tableView.dataSource = self;
+//    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    _tableView.showsHorizontalScrollIndicator = NO;
+//    _tableView.showsVerticalScrollIndicator = NO;
+//    //    _myTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+//    _tableView.backgroundColor = backColor;
+//    [self.view addSubview:_tableView];
+    
     _selectedPhotos = [NSMutableArray array];
     _selectedAssets = [NSMutableArray array];
     
@@ -150,12 +165,7 @@ static CGFloat textFieldH = 40;
     _selfIconStr = @"首页头像";
     _selfNameStr = @"张江威";
     _selfIDStr = @"d6709590d4154b8a945415cf91757c8f";
-    
-//    [self setRightBarItemWithString:@"发送"];
-    
-    
-    self.tableView.separatorStyle = NO;
-    self.automaticallyAdjustsScrollViewInsets = YES;
+
     _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     _rightBtn.frame = CGRectMake(0, 0, 50, 35);
@@ -169,8 +179,7 @@ static CGFloat textFieldH = 40;
     [_rightBtn addGestureRecognizer:longPressGR];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:_rightBtn];
     self.navigationItem.rightBarButtonItem = rightButton;
-//    [LCProgressHUD showLoading:@"正在加载"];
-    self.edgesForExtendedLayout = UIRectEdgeTop;
+
     _pageNo = 1;
     [self createData:_pageNo refresh:0];
     
@@ -181,11 +190,11 @@ static CGFloat textFieldH = 40;
             self.tableView.mj_footer.hidden = YES;
             [self createData:self.pageNo refresh:1];
             
-//            [self.tableView reloadData];
         }else{
             [self.tableView.mj_footer endRefreshing];
-            UIView * viw = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 45)];
-            
+            UIView * viw = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH(self.view), 45)];
+            [viw addSubview:self.noLabelView];
+            _noLabelView.text = @"— 没有更多了 —";
             self.tableView.tableFooterView = viw;
             self.tableView.mj_footer.hidden = YES;
         }
@@ -235,7 +244,6 @@ static CGFloat textFieldH = 40;
         __weak typeof(self) weakSelf = self;
         [_refreshHeader setRefreshingBlock:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                weakSelf.tableView.mj_footer.hidden = NO;
                 _pageNo = 1;
                 [weakSelf createData:weakSelf.pageNo refresh:0];
                 [weakHeader endRefreshing];
@@ -284,23 +292,32 @@ static CGFloat textFieldH = 40;
 
             datee = data[@"data"];
             _totalPage = [data[@"totalPage"] integerValue];
-//            NSMutableArray * dateArr =  [NSMutableArray arrayWithArray:[TRZXPhotoTextModel mj_objectArrayWithKeyValuesArray:datee]];
             NSMutableArray * dateArr = [NSMutableArray array];
+            _coverStr = data[@"topPic"];//封面
+            _selfIDStr = data[@"userId"];//ID
+            _selfNameStr = [Login curLoginUser].name;//姓名
+            _selfIconStr = [Login curLoginUser].name;//头像
+            
             if(refreshIndex==0){
-                _coverStr = data[@"topPic"];//封面
+                
                 [self.dataArray removeAllObjects];
                 dateArr =  [NSMutableArray arrayWithArray:[TRZXPhotoTextModel mj_objectArrayWithKeyValuesArray:datee]];
 
                 if (dateArr.count>0) {
                     self.tableView.tableFooterView.hidden = YES;
                     self.tableView.mj_footer.hidden = NO;
+                    if(_totalPage<=1){
+                        self.tableView.tableFooterView = self.noLabelView;
+                        _noLabelView.hidden = NO;
+                        _noLabelView.text = @"— 没有更多了 —";
+                        self.tableView.mj_footer.hidden = YES;
+                    }else{
+                        _noLabelView.hidden = YES;
+                        self.tableView.mj_footer.hidden = NO;
+                        self.tableView.tableFooterView.hidden = YES;
+                    }
                 }else{
-
-                    UILabel * noLabelView = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
-                    noLabelView.text = @"— 暂无内容 —";
-                    noLabelView.textAlignment = NSTextAlignmentCenter;
-                    noLabelView.textColor = zideColor;
-                    self.tableView.tableFooterView = noLabelView;
+                    self.tableView.tableFooterView = self.noLabelView;
                     self.tableView.mj_footer.hidden = YES;
                 }
             }else{
@@ -312,6 +329,7 @@ static CGFloat textFieldH = 40;
                     [self.tableView.mj_footer endRefreshing];
                 }else{
                     self.tableView.mj_footer.hidden = YES;
+                     [self.tableView.mj_footer endRefreshing];
                 }
             }
 
@@ -322,7 +340,6 @@ static CGFloat textFieldH = 40;
             }else{
                 _messagStr = @"0";
             }
-            
             models.iconName = _selfIconStr;//头像(默认的空头像)
             models.name = _selfNameStr;//姓名(默认的空名字)
             models.coverImage = _coverStr;//封面头像
@@ -401,7 +418,15 @@ static CGFloat textFieldH = 40;
     }];
 
 }
-
+- (UILabel *)noLabelView{
+    if (!_noLabelView) {
+        _noLabelView = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 45)];
+        _noLabelView.text = @"— 暂无内容 —";
+        _noLabelView.textAlignment = NSTextAlignmentCenter;
+        _noLabelView.textColor = zideColor;
+    }
+    return _noLabelView;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.dataArray.count;
@@ -649,6 +674,11 @@ static CGFloat textFieldH = 40;
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [_textField resignFirstResponder];
+    for (TRZXFriendLineCell *cell in [self.tableView visibleCells]) {
+        if (cell.operationMenu.isShowing) {
+            cell.operationMenu.show = NO;
+        }
+    };
 }
 
 

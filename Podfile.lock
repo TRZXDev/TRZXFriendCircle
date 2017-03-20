@@ -20,6 +20,13 @@ PODS:
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - MLLabel (1.10.3)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - SDAutoLayout (2.1.7)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -27,6 +34,11 @@ PODS:
   - TRZXDIYRefresh (0.0.1):
     - MJRefresh
   - TRZXKit (0.0.9)
+  - TRZXLogin (0.0.3):
+    - MJExtension
+    - ReactiveCocoa (~> 2.5)
+    - TRZXKit
+    - TRZXNetwork
   - TRZXMSSBrowse (0.0.1):
     - SDWebImage
   - TRZXNetwork (0.0.7):
@@ -48,6 +60,7 @@ DEPENDENCIES:
   - SDWebImage
   - TRZXDIYRefresh
   - TRZXKit
+  - TRZXLogin
   - TRZXMSSBrowse
   - TRZXNetwork
   - TRZXZJWPhotoPicker
@@ -61,16 +74,18 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MLLabel: 3760fb38aeac53b212409b634bc4aa4bf39ab628
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TRZXDIYRefresh: a89e7cf1658ff7d57aad081c596c2a9cf137dcf2
   TRZXKit: af6dc2bcca593585d079d59ca10c8912ddc81b56
+  TRZXLogin: 5645812a5e4e18e756e53394f4fb4c405be9a81d
   TRZXMSSBrowse: 8457018b72ba433f010d782b0ff045f08bcfbad3
   TRZXNetwork: d6ce75a420218ed4b6b95f10220442f175947125
   TRZXZJWPhotoPicker: 84f869c75d84d33b44741aa59d408b3456814a51
   TZImagePickerController: 87a138ae5d585225aaa6c8abe2cface0f0ad19dd
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: ebcda752fff8483ecc6f445ed0247e49e52245c1
+PODFILE CHECKSUM: c2dfd8cd713275698851b5d92b8551f8e28aec2f
 
 COCOAPODS: 1.2.0

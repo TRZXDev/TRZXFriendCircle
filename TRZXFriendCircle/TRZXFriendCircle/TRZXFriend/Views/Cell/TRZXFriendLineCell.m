@@ -5,7 +5,7 @@
 #import "TRZXFriendLineCell.h"
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
-
+#import <TRZXLogin/Login.h>
 
 
 #define HEIGTH(view) view.frame.size.height
@@ -304,7 +304,7 @@ NSString *const kTRZXFriendLineCellOperationButtonClickedNotification = @"TRZXFr
             _shareIconView.hidden = NO;
             _shareTitleLabel.hidden = NO;
         }
-        if ([model.userId isEqualToString:@""]) {//默认自己的ID
+        if ([model.userId isEqualToString:[Login curLoginUser].userId]) {//默认自己的ID
             _deleteButton.hidden = NO;
         }else{
             _deleteButton.hidden = YES;

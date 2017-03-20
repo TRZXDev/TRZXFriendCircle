@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDAutoLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -60,6 +65,11 @@
 			<false/>
 		</dict>
 		<key>TRZXKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TRZXLogin.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -92,7 +102,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>016D3D4A995F21747FE2101B2B604380</key>
+		<key>0E2EA9380B1800B246FFE06D8B6207B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,12 +112,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>27C1BF7D4323BD9629681E00DE7A802A</key>
+		<key>2B94EF2CC9FF428A66B160381B814E76</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>32A77486A75C65184A8E42CE2A6AF3B6</key>
+		<key>35705A0CC3E97065644FAF756FD88EEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,22 +127,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69389255B3252A1027E3766CD3D9A353</key>
+		<key>620D41B6BAFE20288F6ABD50A15BAFDE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B1A3522D557DED652E53C19BE872E75</key>
+		<key>7AD4F5DB6BBEC7F8EB5CA92559E769EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D003BBB8D7A4778BFBAB7AC4CE000B1</key>
+		<key>8E1E4A9E706A48D266A4689B80B67D86</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0380A02750B19C2AD4FAA66D6EC107D</key>
+		<key>A7FB4A9FEE2EB20E669A68B8A6072EF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB4D515F37AE1F9D4934B711DF376475</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,7 +157,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C10A10258C6EB2470AB77A36993543AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C36CB2CB977A4E7D954935096D00A1ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7F29F85ECC70BD104E6949A3C5D4ED5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C960A5A3866AC613CD8BCE8A8875311C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD9EC33DC7B083B012938CCF1C47D8D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,22 +192,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA2F7E722442D62937E6D4497A21FAB2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>E14A62900910444707A5504D25EC98DC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC06937A40719B0C3EE0E87CD3E8C5D1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FCA7DC15FB4CCD59AA3893AE907D01B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -18,7 +18,7 @@
 #import "TRZXNetwork.h"
 #import "MJExtension.h"
 #import "UIImageView+WebCache.h"
-
+#import "Login.h"
 #define heizideColor [UIColor colorWithRed:90.0/255.0 green:90.0/255.0 blue:90.0/255.0 alpha:1]
 
 
@@ -141,12 +141,6 @@ static CGFloat textFieldH = 40;
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = NO;
     self.automaticallyAdjustsScrollViewInsets = YES;
-//    if ([_navStr isEqualToString:@"1"]) {
-//        self.navigationItem.leftBarButtonItem = [UIBarButtonItem kipo_LeftTarButtonItemDefaultTarget:self titelabe:@"返回" color:zideColor action:@selector(leftBarButtonItemPressed:)];
-//    }else{
-//        
-//        self.navigationItem.leftBarButtonItem = [UIBarButtonItem kipo_LeftTarButtonItemDefaultTarget:self titelabe:@"返回白" color:[UIColor whiteColor] action:@selector(leftBarButtonItemPressed:)];
-//    }
     self.commentHeadImage = _selfIconStr;
     self.edgesForExtendedLayout = UIRectEdgeTop;
     _pageNo = 1;
@@ -162,6 +156,11 @@ static CGFloat textFieldH = 40;
     [self setupTextField];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    _selfIDStr = [Login curLoginUser].userId;//姓名ID
+    _selfNameStr = [Login curLoginUser].name;//姓名
+    _selfIconStr = [Login curLoginUser].name;//头像
+    
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -357,13 +356,9 @@ static CGFloat textFieldH = 40;
         [cell setDidClick2CommentLabelBlock:^(NSString *commentId,NSString *commentName,NSString *parentId,NSString *headImage,NSString *mid,NSString *comment, CGRect rectInWindow, NSIndexPath *indexPath) {
             if ([commentId isEqualToString:_selfIDStr]) {
                 weakSelf.currentEditingIndexthPath = indexPath;
-//                UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"删除", nil];
                 _commentIdStr = mid;
                 _hfcommentStr = parentId;
                 _commentStr = comment;
-//                sheet.tag = 20161101+indexPath.row;
-//                [sheet showInView:self.view];
-                
                 UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确认删除吗？" message:nil preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
                 UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0E2EA9380B1800B246FFE06D8B6207B7'
-               BlueprintName = 'YYCache'
+               BlueprintIdentifier = '620D41B6BAFE20288F6ABD50A15BAFDE'
+               BlueprintName = 'TRZXLogin'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'YYCache.framework'>
+               BuildableName = 'TRZXLogin.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
