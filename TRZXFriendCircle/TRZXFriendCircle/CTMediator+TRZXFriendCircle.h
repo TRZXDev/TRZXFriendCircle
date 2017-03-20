@@ -10,9 +10,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMediator (TRZXFriendCircle)
-
+//朋友圈
 - (UIViewController *)FriendCircle_TRZXFriendLineTableViewController;
-
+//相册
 - (UIViewController *)FriendCircle_PhotoTimeLineTableViewController;
 
 @end
